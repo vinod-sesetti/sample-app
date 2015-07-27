@@ -1,0 +1,15 @@
+<img src="/static/waypoints/images/2015/07/17/index1.jpeg">
+
+
+		{% for im in  img %}
+		
+			{{ im.file}}
+			{% load staticfiles %}
+			{{ static }}
+			<img src="{% static "/waypoints/images/{{ im.file }}" %}" height = "60px" width="60px" />
+			{{ im.email }}<br>
+
+
+		{% endfor %}
+
+		files/2015/07/17/index1.jpeg

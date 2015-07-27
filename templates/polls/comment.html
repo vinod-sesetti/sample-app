@@ -1,0 +1,62 @@
+{% extends "base_index.html" %}
+{% block content %}
+{% load bootstrap %}
+<div class="jumbotron">
+
+<div calss= "detail2">
+
+        <div id = "myComment">
+        <div class="form-group">
+            <form action="{% url 'polls:comment' question.id %} " method="POST">
+                {% csrf_token %}        
+            <ul>
+                {% for comment_data in data %}
+                <li ><a href="#">{{ comment_data.comment }} By {{ comment_data.user }}</a></li>            
+                {% endfor %}            
+            </ul>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
+
+</div>   
+ <!-- <div id="cform">      
+                        <ul>
+                            {% for comment_data in data %}
+                            <li ><a href="#">{{ comment_data.comment }} By {{ comment_data.user }}</a></li>            
+                            {% endfor %}            
+                        </ul>
+                    </div> -->
+
+
+
+<!-- <footer class="footer">
+        <p>Company 2015</p>
+      </footer> -->
+
+{% endblock content %}
+
+
+
+
+<!--     <div class="row wite">
+        <div class="col-md-8"><h2>You can comment here about the Poll</h2></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        </div>
+        <div class="row wite">
+            <div class="col-md-8">
+        
+        <form role="form" action="/2/login/" method="post" ><input type='hidden' name='csrfmiddlewaretoken' value='pcRejHhqr9l2MLB08G1fqL7uRxzrDmk5' />
+            <div class="form-group">
+            <textarea name="comment" id ="comment" placeholder="write your Comment here.." rows="4" cols="40" class="form-control" required></textarea>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-8 col-sm-4">
+            <input type="submit" value="Comment" class="btn btn-success btn-block" id="post" data-toggle="tooltip" data-placement="top"   />
+            </div>
+            </div>
+        </form>
+        </div> -->

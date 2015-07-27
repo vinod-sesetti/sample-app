@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+  <head>
+    <title>{% block title %}This is my new project home page{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <style type="text/css">
+    li {
+      list-style: none;
+    }
+    .center{
+      text-align: center;
+    }
+    ::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+
+    </style>
+  </head>
+  <body style="padding-top:60px">
+             
+        <div class="container">
+          <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              
+              <a class="navbar-brand" href="/">Home</a>
+              
+              <a class="navbar-brand" href="/create/">Create Todo</a>
+            <a  class="navbar-brand" href="{% url 'demoapp.views.index1' %}" >TodoItems</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              </ul>
+            </div>
+          </div>
+        
+           <div align="right">
+                    <form class="nice" action="/search/" id="search" > 
+                        Search
+                        <input type="search" class="small input-text" placeholder="Enter search text" name="q">
+                        <input type="submit" class="nice small radius red button" value="GO">
+                        <br/><br/>
+                </form>
+        </div>
+        {% block content %}
+        {% endblock content %}
+        </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

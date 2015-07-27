@@ -1,0 +1,106 @@
+{% block content %}
+
+{% load staticfiles %}
+<style >
+	/* begin Page */
+/* Created by Artisteer v3.0.0.41778 */
+
+#art-main, table
+{
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+  padding: 0; 
+  margin:0;
+  color: #151718;
+  height:100%;
+  min-height:100%;
+  background-color: #C7D1D6;
+  background-image: url('app/static/waypoints/images/2015/07/20/Bottom_texture.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: top left;
+  min-width: 900px;
+}
+
+#art-page-background-middle-texture
+{
+  position: relative;
+  background-image: url('app/static/waypoints/images/2015/07/20/Middle_texture.jpg');
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-attachment: fixed;
+  width:100%;
+  min-height:100%;
+  min-width: 900px;
+ }
+
+label{
+  height:31px;
+
+}
+
+/* end LayoutCell, sidebar1 */
+
+/* begin LayoutCell, content */
+
+/* end LayoutCell, content */
+
+
+
+
+</style>
+{% load staticfiles %}
+<div id="art-page-background-middle-texture">
+<div style="width: 554px; margin: 0px auto; background-color: rgb(211,215,216); height: 500px;"id="art-main">
+<br><br>
+<h3 style = "text-align:center">User form</h3>
+<br>
+<div style="width: 400px; margin: 0px auto;">
+<form action="{% url 'app:userform' %}" method="post">
+			{% csrf_token %}
+				
+        <p>
+          <label>First_name</label>
+          <label>{{form.first_name }}</label>
+        
+         </p><br> 
+        
+
+      <p>
+          <label>Last_name</label>
+          <label>{{form.last_name }}</label>
+        
+      </p><br> 
+      
+      <p>
+          <label>Email</label>
+          <label style="margin-left: 31px;">{{form.email }}</label>
+        
+      </p> <br>
+        
+
+        
+				
+
+<input type = "submit" value = "submit" style="height: 54px; width: 86px;align:center">
+
+</div>
+</form>
+</div>
+</div>
+
+{% endblock %}

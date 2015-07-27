@@ -1,0 +1,77 @@
+{% block content %}
+{% load staticfiles %}
+<style>
+	/* begin Page */
+/* Created by Artisteer v3.0.0.41778 */
+
+#art-main, table
+{
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, ul, ol, li
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+  padding: 0; 
+  margin:0;
+  color: #151718;
+  height:100%;
+  min-height:100%;
+  background-color: #C7D1D6;
+  background-image: url('app/static/waypoints/images/2015/07/20/Bottom_texture.jpg');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: top left;
+  min-width: 900px;
+}
+
+#art-page-background-middle-texture
+{
+  position: relative;
+  background-image: url('app/static/waypoints/images/2015/07/20/Middle_texture.jpg');
+  background-repeat: repeat-x;
+  background-position: top left;
+  background-attachment: fixed;
+  width:100%;
+  min-height:100%;
+  min-width: 900px;
+ }
+</style>
+
+<div id="art-page-background-middle-texture">
+
+<div style="width: 900px; margin: 0px auto; background-color: white;"id="art-main">
+		<h2 style=" text-align:center">User profiles</h2><br>
+		<table style="width: 500px; margin: 0px auto;">
+		<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Profilepic</th>
+		</tr>
+			{{ static }}
+		{% for im in  img %}
+		<tr>
+			<td>{{ im.first_name }}</td>
+			<td>{{ im.email }}</td>
+			<td><img src ="/{{ im.file }}" height=" 80px"width = "80px" ></td>
+			</tr>
+		{% endfor %}
+		{% load staticfiles %}
+		</tr>
+		</table>	
+		<a href = "/"><button name="" type="submit" value="HTML" style="height: 54px; width: 86px;margin: 0px auto;" >Go Back</button></a>
+		</div>
+</div>
+
+
+{% endblock %}
