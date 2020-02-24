@@ -2,7 +2,7 @@ amqp==1.4.6
 anyjson==0.3.3
 beautifulsoup4==4.3.2
 billiard==3.3.0.20
-bleach==1.4.1
+bleach==3.1.1
 celery==3.1.18
 certifi==2015.4.28
 coverage==3.7.1
