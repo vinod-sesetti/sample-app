@@ -83,5 +83,5 @@ sqlparse==0.1.13
 static3==0.6.1
 svn==0.3.36
 Unidecode==0.4.17
-urllib3==1.11
+urllib3==1.26.5
 Whoosh==2.7.0
