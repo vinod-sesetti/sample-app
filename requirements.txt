@@ -50,7 +50,7 @@ html5lib==0.99999
 httpie==0.9.2
 icalendar==3.9.0
 ipdb==0.8
-ipython==2.3.1
+ipython==7.16.3
 jsmin==2.1.1
 kombu==3.0.26
 lxml==3.4.4
